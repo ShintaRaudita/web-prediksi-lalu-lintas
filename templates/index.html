@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Kemacetan Lalu Lintas</title>
+    <style>
+        body {
+            background-image: url("/static/bg.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            width: 400px;
+            margin: 100px auto;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+            background: #f2f2f2;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediksi Kemacetan Lalu Lintas</h2>
+        <form method="POST">
+            <input type="text" name="hour" placeholder="Masukkan jam (0-23):" required>
+            <select name="day" required>
+                <option value="">Pilih Hari</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <input type="text" name="car" placeholder="Jumlah Mobil:" required>
+            <input type="text" name="motor" placeholder="Jumlah Motor:" required>
+            <input type="text" name="truck" placeholder="Jumlah Truk:" required>
+            <button type="submit">Prediksi</button>
+        </form>
+        {% if prediction %}
+        <div class="result">
+            Tingkat kemacetan: <strong>{{ prediction }}</strong>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
