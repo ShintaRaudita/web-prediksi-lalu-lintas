@@ -1,7 +1,7 @@
 # Traffic Congestion Prediction - Web Application
 
 ## Deskripsi Proyek
-Aplikasi web interaktif untuk memprediksi tingkat kemacetan lalu lintas secara real-time. Proyek ini mengintegrasikan model Machine Learning Random Forest yang telah dilatih ke dalam antarmuka berbasis web menggunakan kerangka kerja Flask, memudahkan pengguna atau pihak terkait dalam menganalisis kondisi kepadatan jalan berdasarkan parameter input tertentu.
+Aplikasi web interaktif untuk memprediksi tingkat kemacetan lalu lintas secara real-time. Proyek ini mengintegrasikan model Machine Learning Random Forest yang telah dilatih di [repo model](https://github.com/ShintaRaudita/model-prediksi-lalu-lintas) ke dalam antarmuka berbasis web menggunakan kerangka kerja Flask, memudahkan pengguna atau pihak terkait dalam menganalisis kondisi kepadatan jalan berdasarkan parameter input tertentu.
 
 ## Fitur Utama
 - **Antarmuka Web Responsif:** Halaman input data yang intuitif dan mudah digunakan dengan tema visual lalu lintas yang modern.
